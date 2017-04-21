@@ -1,0 +1,28 @@
+{
+  "name": "boardingpass",
+  "version": "0.0.1",
+  "description": "boarding pass assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node server.js",
+    "start": "npm-run-all --parallel serve test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/walkharddotninja/boardingPass.git"
+  },
+  "author": "Nicolas Fry, Phillip Smith, Tim Ingle",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/walkharddotninja/boardingPass/issues"
+  },
+  "homepage": "https://github.com/walkharddotninja/boardingPass#readme",
+  "devDependencies": {
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {
+    "hapi": "^16.1.1",
+    "mongoose": "^4.9.5"
+  }
+}
