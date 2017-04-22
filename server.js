@@ -4,6 +4,11 @@ const hapi = require('hapi');
 const Inert = require('inert');
 const Vision = require('vision');
 const Good = require('good');
+const Mongoose = require('mongoose');
+const HapiSwagger = require('hapi-swagger');
+
+// REPLACE THIS WITH YOUR MONGODBURI
+const mongoDBURI = 'REPLACETHISSTRINGWITHYOURMONGODBURI';
 
 // Logger Options
 const LoggerOptions = {
@@ -22,6 +27,23 @@ const LoggerOptions = {
   }
 };
 
+// Swagger Options
+const SwaggerOptions = {
+    info: {
+            title: 'Boarding Pass Assignment Docs',
+            version: '0.0.1'
+          }
+  };
+
+  // Mongoose
+Mongoose.connect(mongoDBURI, (err) => {
+    if (err) {
+      throw err;
+    }
+
+    console.log('DB successfully connected');
+  });
+
 // create server
 const server = new hapi.Server();
 
@@ -38,7 +60,11 @@ server.register([
   {
     register: Good,
     options: LoggerOptions
-  }
+  },
+  {
+   register: HapiSwagger,
+   options: SwaggerOptions
+  },
 ], (err) => {                      // callback function
 
     // if an error occured when registering packages, print it out!
