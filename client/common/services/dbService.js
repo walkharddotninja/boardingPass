@@ -18,5 +18,40 @@
       });
     };
 
+    this.exampleStudentList = () => {
+      return [
+        {
+          last: 'Jenkins',
+          first: 'Leroy',
+          email: 'leroy.jenkins@ufl.edu',
+          studentId: '1234-5678'
+        },
+        {
+          last: 'Skywalker',
+          first: 'Luke',
+          email: 'luke.skywalker@ufl.edu',
+          studentId: '2345-6789'
+        },
+        {
+          last: 'Kirk',
+          first: 'James',
+          email: 'james.kirk@ufl.edu',
+          studentId: '3456-7890'
+        },
+        {
+          last: 'Hatake',
+          first: 'Kakashi',
+          email: 'senpai@ufl.edu',
+          studentId: '4567-8901'
+        },
+        {
+          last: 'James',
+          first: 'Ashley',
+          email: 'shopsmart@ufl.edu',
+          studentId: '5678-9012'
+        }
+      ];
+    };
+
   });
 })();

@@ -3,8 +3,11 @@
 
   angular.module('studentListController', ['dbService'])
   .controller('studentListController', function(dbService) {
-    this.msg = 'STUDENT LIST Component'; // this is only to demonstrate how to exchange information between the view and the controller
+    this.panelHeader = 'Students';
 
     // implement logic
+
+    // sample logic
+    this.studentList = dbService.exampleStudentList();
   });
 })();
