@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  angular.module('appShell', ['studentListController'])
-  .component('appShell', {
+  angular.module('studentList', ['studentListController'])
+  .component('studentList', {
     templateUrl: './client/students/studentList/studentList.html',
     controller: 'studentListController'
   });

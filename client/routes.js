@@ -8,20 +8,18 @@
   ])
   .config(function($locationProvider, $stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
-    $urlRouterProvider.when('/', '/login');
+    $urlRouterProvider.otherwise('');
+    $urlRouterProvider.when('', '/student-list');
 
     $stateProvider
       .state('app', {
         abstract: true,
         url: '',
-        template: '<app-shell></app-shell>',
-        params: { login: false },
+        template: '<app-shell></app-shell>'
       })
       .state('app.studentList', {
         url: '/student-list',
-        template: '<student-list></student-list>',
-        params: { login: true },
+        template: '<student-list></student-list>'
       });
 
     });

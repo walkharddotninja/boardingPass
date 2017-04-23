@@ -3,6 +3,6 @@
 
   angular.module('appShell', [])
   .component('appShell', {
-    templateUrl: './client/appShell/appShell.html',
+    templateUrl: './client/common/components/appShell/appShell.html',
   });
 })();
